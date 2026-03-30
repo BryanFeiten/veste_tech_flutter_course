@@ -1,0 +1,25 @@
+name: clone_airbnb
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: 5.9.2
+  mobx: 2.6.0
+  flutter_mobx: 2.3.0
+  get_it: 9.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mobx_codegen: 2.7.6
+  build_runner: 2.13.1
+
+flutter:
+  uses-material-design: true
