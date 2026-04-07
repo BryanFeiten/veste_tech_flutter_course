@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+
+import 'injection_container.dart';
 import 'pages/home.page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initTasksDependencies();
   runApp(const MainApp());
 }
 

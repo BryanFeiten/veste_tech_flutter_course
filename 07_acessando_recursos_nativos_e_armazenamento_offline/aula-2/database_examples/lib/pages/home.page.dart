@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:database_examples/pages/shared_preferences.page.dart';
-import 'package:database_examples/pages/hive.page.dart';
+import 'package:database_examples/stores/task.store.dart';
 import 'package:database_examples/pages/secure_storage.page.dart';
 import 'package:database_examples/pages/sqflite.page.dart';
+import 'package:database_examples/pages/task.page.dart';
+import 'package:database_examples/injection_container.dart';
 
 /// Página principal com lista de exemplos de bancos de dados
 class HomePage extends StatelessWidget {
@@ -20,8 +22,8 @@ class HomePage extends StatelessWidget {
       ),
       _Example(
         title: 'Hive',
-        subtitle: 'Banco de dados NoSQL rápido e leve',
-        page: const HivePage(),
+        subtitle: 'Lista de tarefas com banco NoSQL',
+        page: TaskPage(taskStore: TaskStore(getIt())),
         icon: Icons.hub_outlined,
         color: Colors.amber,
       ),
@@ -49,7 +51,7 @@ class HomePage extends StatelessWidget {
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
         itemCount: examples.length,
-        separatorBuilder: (_, __) => const SizedBox(height: 12),
+        separatorBuilder: (_, _) => const SizedBox(height: 12),
         itemBuilder: (context, index) {
           final example = examples[index];
           return _ExampleCard(
