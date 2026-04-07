@@ -1,2 +1,4 @@
 **/*.pv.md
 .DS_Store
+claude.md
+.claudeignore
