@@ -1,9 +1,13 @@
 import 'package:get_it/get_it.dart';
 
+import 'adapters/secure_storage.adapter.dart';
 import 'adapters/task_hive.adapter.dart';
+import 'repositories/secure_token.repository.dart';
 import 'repositories/task.repository.dart';
 import 'services/create_task.service.dart';
+import 'services/get_secure_token.service.dart';
 import 'services/get_tasks.service.dart';
+import 'services/save_secure_token.service.dart';
 import 'services/toggle_task_status.service.dart';
 
 final getIt = GetIt.instance;
@@ -34,6 +38,26 @@ Future<void> initTasksDependencies() async {
       getTasks: getIt(),
       createTask: getIt(),
       toggleTaskStatus: getIt(),
+    ),
+  );
+
+  // Secure Storage
+  getIt.registerLazySingleton<ISecureStorageAdapter>(
+    () => SecureStorageAdapter(),
+  );
+
+  getIt.registerLazySingleton<SaveSecureTokenLocalService>(
+    () => SaveSecureTokenLocalService(getIt()),
+  );
+
+  getIt.registerLazySingleton<GetSecureTokenLocalService>(
+    () => GetSecureTokenLocalService(getIt()),
+  );
+
+  getIt.registerLazySingleton<SecureTokenRepository>(
+    () => SecureTokenRepository(
+      saveToken: getIt(),
+      getToken: getIt(),
     ),
   );
 }
