@@ -1,4 +1,5 @@
 import 'package:hive_ce/hive.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../models/task.model.dart';
 
@@ -31,12 +32,16 @@ class TaskHiveAdapter implements ITaskHiveAdapter {
 
   @override
   Future<void> init() async {
+    // Inicializa o Hive com o diretório de documentos do app
+    final appDocsDir = await getApplicationDocumentsDirectory();
+    Hive.init(appDocsDir.path);
+
     // Registra o adapter do modelo Task (typeId 0)
     if (!Hive.isAdapterRegistered(0)) {
       Hive.registerAdapter(TaskAdapter());
     }
 
-    // Abre a caixa de tarefas, inicializando o Hive se necessário
+    // Abre a caixa de tarefas
     if (!Hive.isBoxOpen(_boxName)) {
       _box = await Hive.openBox<Task>(_boxName);
     } else {

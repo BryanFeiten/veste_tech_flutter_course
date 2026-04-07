@@ -40,10 +40,29 @@ class _TaskPageState extends State<TaskPage> {
 }
 
 /// Formulário de adição de nova tarefa.
-class _TaskFormWidget extends StatelessWidget {
+class _TaskFormWidget extends StatefulWidget {
   final TaskStore taskStore;
 
   const _TaskFormWidget({required this.taskStore});
+
+  @override
+  State<_TaskFormWidget> createState() => _TaskFormWidgetState();
+}
+
+class _TaskFormWidgetState extends State<_TaskFormWidget> {
+  late final TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,24 +72,30 @@ class _TaskFormWidget extends StatelessWidget {
         children: [
           Expanded(
             child: TextField(
+              controller: _controller,
               decoration: const InputDecoration(
                 hintText: 'Nova tarefa...',
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.add_task_outlined),
               ),
-              onChanged: (value) => taskStore.setNewTaskTitle(value),
-              onSubmitted: (_) => taskStore.createTask(),
+              onChanged: (value) => widget.taskStore.setNewTaskTitle(value),
+              onSubmitted: (_) => _createTask(),
             ),
           ),
           const SizedBox(width: 8),
           ElevatedButton.icon(
-            onPressed: () => taskStore.createTask(),
+            onPressed: _createTask,
             icon: const Icon(Icons.add),
             label: const Text('Adicionar'),
           ),
         ],
       ),
     );
+  }
+
+  void _createTask() {
+    widget.taskStore.createTask();
+    _controller.clear();
   }
 }
 
