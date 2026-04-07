@@ -6,6 +6,7 @@ import 'pages/home.page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initTasksDependencies();
+  await initSqfliteDependencies();
   runApp(const MainApp());
 }
 

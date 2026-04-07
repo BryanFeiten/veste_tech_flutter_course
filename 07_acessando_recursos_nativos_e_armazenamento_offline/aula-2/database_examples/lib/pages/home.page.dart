@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:database_examples/pages/shared_preferences.page.dart';
+import 'package:database_examples/stores/contact.store.dart';
 import 'package:database_examples/stores/task.store.dart';
 import 'package:database_examples/pages/secure_storage.page.dart';
 import 'package:database_examples/pages/sqflite.page.dart';
@@ -37,7 +38,7 @@ class HomePage extends StatelessWidget {
       _Example(
         title: 'SQLite',
         subtitle: 'Banco de dados relacional local',
-        page: const SqflitePage(),
+        page: SqflitePage(contactStore: ContactStore(getIt())),
         icon: Icons.storage_outlined,
         color: Colors.purple,
       ),
