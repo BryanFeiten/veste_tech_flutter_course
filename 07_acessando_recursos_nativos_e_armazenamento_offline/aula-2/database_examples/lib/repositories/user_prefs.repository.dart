@@ -1,5 +1,5 @@
-import '../services/save_user_name.service.dart';
 import '../services/get_user_name.service.dart';
+import '../services/save_user_name.service.dart';
 
 /// Repositório que orquestra os serviços de preferências do usuário.
 class UserPrefsRepository {
@@ -9,8 +9,8 @@ class UserPrefsRepository {
   UserPrefsRepository({
     required SaveUserNameLocalService saveUserName,
     required GetUserNameLocalService getUserName,
-  })  : _saveUserName = saveUserName,
-        _getUserName = getUserName;
+  }) : _saveUserName = saveUserName,
+       _getUserName = getUserName;
 
   /// Salva o nome do usuário.
   Future<void> saveUserName(String name) => _saveUserName(name);

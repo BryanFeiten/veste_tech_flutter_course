@@ -6,16 +6,17 @@ import '../stores/secure_token.store.dart';
 
 /// Página de exemplo com Secure Storage para persistência de Auth Token.
 class SecureStoragePage extends StatelessWidget {
-  const SecureStoragePage({super.key});
+  SecureStoragePage({super.key});
+
+  final store = SecureTokenStore(
+    getTokenService: getIt(),
+    saveTokenService: getIt(),
+  );
 
   @override
   Widget build(BuildContext context) {
-    final store = SecureTokenStore(getIt());
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Secure Storage'),
-      ),
+      appBar: AppBar(title: const Text('Secure Storage')),
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(

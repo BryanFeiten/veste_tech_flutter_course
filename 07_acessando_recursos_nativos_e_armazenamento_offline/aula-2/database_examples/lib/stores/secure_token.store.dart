@@ -1,6 +1,6 @@
+import 'package:database_examples/services/get_secure_token.service.dart';
+import 'package:database_examples/services/save_secure_token.service.dart';
 import 'package:mobx/mobx.dart';
-
-import '../repositories/secure_token.repository.dart';
 
 part 'secure_token.store.g.dart';
 
@@ -9,9 +9,18 @@ part 'secure_token.store.g.dart';
 class SecureTokenStore = _SecureTokenStore with _$SecureTokenStore;
 
 abstract class _SecureTokenStore with Store {
-  _SecureTokenStore(this._repository);
+  // _SecureTokenStore(this._repository);
 
-  final SecureTokenRepository _repository;
+  // final SecureTokenRepository _repository;
+
+  _SecureTokenStore({
+    required SaveSecureTokenLocalService saveTokenService,
+    required GetSecureTokenLocalService getTokenService,
+  }) : _saveTokenService = saveTokenService,
+       _getTokenService = getTokenService;
+
+  final SaveSecureTokenLocalService _saveTokenService;
+  final GetSecureTokenLocalService _getTokenService;
 
   /// Token digitado no campo de entrada – acesso via getter.
   @observable
@@ -43,7 +52,7 @@ abstract class _SecureTokenStore with Store {
     _isLoading = true;
     _message = '';
     try {
-      await _repository.saveToken(_tokenInput.trim());
+      await _saveTokenService(_tokenInput.trim());
       _message = 'Token salvo com sucesso!';
       _tokenInput = '';
     } catch (e) {
@@ -59,7 +68,7 @@ abstract class _SecureTokenStore with Store {
     _isLoading = true;
     _message = '';
     try {
-      final token = await _repository.getToken();
+      final token = await _getTokenService();
       _retrievedToken = token ?? 'Nenhum token encontrado';
       _message = token != null ? 'Token recuperado!' : 'Nenhum token salvo';
     } catch (e) {

@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:database_examples/pages/shared_preferences.page.dart';
-import 'package:database_examples/stores/contact.store.dart';
-import 'package:database_examples/stores/task.store.dart';
+import 'package:database_examples/injection_container.dart';
 import 'package:database_examples/pages/secure_storage.page.dart';
+import 'package:database_examples/pages/shared_preferences.page.dart';
 import 'package:database_examples/pages/sqflite.page.dart';
 import 'package:database_examples/pages/task.page.dart';
-import 'package:database_examples/injection_container.dart';
+import 'package:database_examples/stores/contact.store.dart';
+import 'package:database_examples/stores/task.store.dart';
+import 'package:flutter/material.dart';
 
 /// Página principal com lista de exemplos de bancos de dados
 class HomePage extends StatelessWidget {
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
       _Example(
         title: 'Secure Storage',
         subtitle: 'Armazenamento seguro para dados sensíveis',
-        page: const SecureStoragePage(),
+        page: SecureStoragePage(),
         icon: Icons.lock_outline,
         color: Colors.green,
       ),
@@ -108,10 +108,7 @@ class _ExampleCard extends StatelessWidget {
       elevation: 2,
       child: ListTile(
         leading: Icon(icon, color: color, size: 36),
-        title: Text(
-          title,
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text(subtitle),
         trailing: const Icon(Icons.arrow_forward_ios, size: 18),
         onTap: onTap,
