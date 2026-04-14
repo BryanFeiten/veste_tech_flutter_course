@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:native_playground/core/native_services/adapters/camera_adapter.dart';
+import 'package:native_playground/features/camera_demo/adapters/camera_adapter.dart';
 
 final GetIt sl = GetIt.instance;
 

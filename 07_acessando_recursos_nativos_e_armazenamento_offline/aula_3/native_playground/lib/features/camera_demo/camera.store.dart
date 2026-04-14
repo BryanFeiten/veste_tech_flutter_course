@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:mobx/mobx.dart';
-import 'package:native_playground/core/native_services/adapters/camera_adapter.dart';
+import 'package:native_playground/features/camera_demo/adapters/camera_adapter.dart';
 
 part 'camera.store.g.dart';
 
