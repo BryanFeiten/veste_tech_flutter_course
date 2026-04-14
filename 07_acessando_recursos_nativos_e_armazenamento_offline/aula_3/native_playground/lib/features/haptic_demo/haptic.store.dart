@@ -5,15 +5,7 @@ class HapticStore {
 
   HapticStore(this._useCase);
 
-  void triggerSuccess() {
-    _useCase.executeSuccess();
-  }
-
-  void triggerError() {
-    _useCase.executeError();
-  }
-
-  void triggerSelection() {
-    _useCase.executeSelection();
+  Future<void> triggerFeedback(HapticIntent intent) async {
+    await _useCase.call(intent);
   }
 }
