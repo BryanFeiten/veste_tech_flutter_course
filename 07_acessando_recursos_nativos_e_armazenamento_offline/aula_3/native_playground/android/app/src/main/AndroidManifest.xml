@@ -1,4 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- PERMISSÃO PARA INTERNET (TODO APP QUE TERÁ CONEXÃO COM A INTERNET PRECISA PARA RODAR NA APK) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- PERMISSÕES PARA O PACOTE: image_picker : START -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- PERMISSÕES PARA O PACOTE: image_picker : END -->
+
     <application
         android:label="native_playground"
         android:name="${applicationName}"

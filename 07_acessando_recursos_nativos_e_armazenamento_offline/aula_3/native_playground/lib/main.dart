@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:native_playground/core/di/injection.dart';
+import 'package:native_playground/features/camera_demo/camera.page.dart';
 
 void main() {
-  runApp(const MainApp());
+  // Inicializa a injeção de dependências antes de rodar o app
+  setupInjection();
+
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Native Playground',
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
+      home: CameraPage(),
     );
   }
 }

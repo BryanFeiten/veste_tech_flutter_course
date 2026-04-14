@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- PERMISSÕES PARA O PACOTE: image_picker : START -->{}
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>É necessário acessar a galeria para escolher uma foto</string>
+	<key>NSCameraUsageDescription</key>
+	<string>É necessário acessar a câmera para tirar foto</string>
+	<!-- PERMISSÕES PARA O PACOTE: image_picker : END -->
 </dict>
 </plist>
