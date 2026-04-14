@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <!-- PERMISSÕES PARA O PACOTE: image_picker : END -->
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:label="native_playground"
         android:name="${applicationName}"

@@ -3,15 +3,18 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:native_playground/core/di/injection.dart';
 import 'package:native_playground/features/camera_demo/camera.store.dart';
 
-class CameraPage extends StatelessWidget {
-  CameraPage({super.key});
+class CameraPage extends StatefulWidget {
+  const CameraPage({super.key});
 
+  @override
+  State<CameraPage> createState() => _CameraPageState();
+}
+
+class _CameraPageState extends State<CameraPage> {
   final store = CameraStore(sl());
 
   @override
   Widget build(BuildContext context) {
-    // Obtendo a store via Service Locator
-
     return Scaffold(
       appBar: AppBar(title: const Text('Native Playground - Câmera')),
       body: Center(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:native_playground/core/di/injection.dart';
-import 'package:native_playground/features/camera_demo/camera.page.dart';
+import 'package:native_playground/home_page.dart';
 
 void main() {
   // Inicializa a injeção de dependências antes de rodar o app
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Native Playground',
       theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
-      home: CameraPage(),
+      home: const HomePage(),
     );
   }
 }
