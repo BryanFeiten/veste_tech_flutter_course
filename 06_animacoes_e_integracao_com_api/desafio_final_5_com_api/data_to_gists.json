@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 599.99,
+            "rating": 1.0,
+            "imagePath": "assets/iphone.png"
+        },
+        {
+            "id": 1,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 1199.98,
+            "rating": 3.0,
+            "imagePath": "assets/iphone.png"
+        },
+        {
+            "id": 2,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 1799.97,
+            "rating": 1.0,
+            "imagePath": "assets/iphone.png"
+        },
+        {
+            "id": 3,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 599.99,
+            "rating": 3.0,
+            "imagePath": "assets/iphone.png"
+        },
+        {
+            "id": 4,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 599.99,
+            "rating": 5.0,
+            "imagePath": "assets/iphone.png"
+        },
+        {
+            "id": 5,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 599.99,
+            "rating": 1.0,
+            "imagePath": "assets/iphone.png"
+        },
+        {
+            "id": 6,
+            "name": "Apple Iphone 11 Pro (128gb) Preto",
+            "price": 599.99,
+            "rating": 1.0,
+            "imagePath": "assets/iphone.png"
+        }
+    ]
+}

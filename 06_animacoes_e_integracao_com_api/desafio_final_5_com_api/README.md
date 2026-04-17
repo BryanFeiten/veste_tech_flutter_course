@@ -1,0 +1,6 @@
+- Página Home
+    - HomeStore
+        -> Carrinho (lista de produtos)
+        -> Produtos (lista de produtos)
+        -> ...métodos para manipular os dados
+- Página de Carrinho
