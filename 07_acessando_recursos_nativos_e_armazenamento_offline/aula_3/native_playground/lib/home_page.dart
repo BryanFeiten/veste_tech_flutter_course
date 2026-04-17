@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:native_playground/features/auth_demo/auth.page.dart';
 import 'package:native_playground/features/camera_demo/camera.page.dart';
 import 'package:native_playground/features/haptic_demo/haptic.page.dart';
+import 'package:native_playground/features/url_launcher_demo/url_launcher.page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,10 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Native Playground'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('Native Playground'), centerTitle: true),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
@@ -32,6 +31,26 @@ class HomePage extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const HapticPage()),
+            ),
+          ),
+          const SizedBox(height: 16),
+          _FeatureTile(
+            title: 'URL Launcher Demo',
+            subtitle: 'Teste de Deep Links e WhatsApp',
+            icon: Icons.open_in_browser,
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const UrlLauncherPage()),
+            ),
+          ),
+          const SizedBox(height: 16),
+          _FeatureTile(
+            title: 'Autenticação biométrica',
+            subtitle: 'Teste de Autenticação biométrica',
+            icon: Icons.fingerprint,
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => AuthPage()),
             ),
           ),
         ],
@@ -58,9 +77,7 @@ class _FeatureTile extends StatelessWidget {
     return Card(
       elevation: 2,
       child: ListTile(
-        leading: CircleAvatar(
-          child: Icon(icon),
-        ),
+        leading: CircleAvatar(child: Icon(icon)),
         title: Text(title),
         subtitle: Text(subtitle),
         trailing: const Icon(Icons.chevron_right),

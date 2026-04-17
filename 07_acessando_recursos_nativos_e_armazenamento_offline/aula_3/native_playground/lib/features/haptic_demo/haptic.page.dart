@@ -58,6 +58,17 @@ class _HapticPageState extends State<HapticPage> {
                 child: const Text('Simular Seleção'),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () => store.triggerFeedback(HapticIntent.warning),
+                child: const Text('Simular Aviso'),
+              ),
+            ),
           ],
         ),
       ),

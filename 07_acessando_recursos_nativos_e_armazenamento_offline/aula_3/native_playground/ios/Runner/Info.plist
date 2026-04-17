@@ -50,6 +50,17 @@
 	<string>É necessário acessar a galeria para escolher uma foto</string>
 	<key>NSCameraUsageDescription</key>
 	<string>É necessário acessar a câmera para tirar foto</string>
+	<!-- <key>NSMicrophoneUsageDescription</key>
+	<string>É necessário para gravar vídeos que serão utilizados no app...</string> -->
 	<!-- PERMISSÕES PARA O PACOTE: image_picker : END -->
+	<!-- LOCAL_AUTH: START -->
+	<key>NSFaceIDUsageDescription</key>
+	<string>Precisamos do face id para desbloquear o app</string>
+	<!-- LOCAL_AUTH: END -->
 </dict>
 </plist>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>https</string>
+	<string>whatsapp</string>
+</array>

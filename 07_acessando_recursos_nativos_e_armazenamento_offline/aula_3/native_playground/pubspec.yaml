@@ -7,14 +7,20 @@ environment:
   sdk: ^3.10.9
 
 dependencies:
+  brasil_fields: ">=1.19.0 <1.20.0"
   flutter:
     sdk: flutter
   get_it: ">=9.2.1 <9.3.0"
   mobx: ">=2.6.0 <2.7.0"
   flutter_mobx: ">=2.3.0 <2.4.0"
 
-  image_picker: ">=1.2.1 <1.3.0" # Image Picker
-  vibration: ">=3.1.8 <3.2.0" # Haptic Feedback
+  image_picker: ">=1.2.1 <1.3.0" # Escolher imagem
+  vibration: ">=3.1.8 <3.2.0" # Feedback Tátil
+  url_launcher: ">=6.3.2 <6.4.0" # Abrir links
+  local_auth: ^3.0.1 # Segurança do usuário
+  app_settings: ^7.0.0 # Segurança do usuário
+
+  
 
 
 dev_dependencies:
