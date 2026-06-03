@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "845077856865",
+    "project_id": "teste-veste",
+    "storage_bucket": "teste-veste.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845077856865:android:cb2b285c9ad8ec09112020",
+        "android_client_info": {
+          "package_name": "com.growdev.veste_fcm_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo8aS9VMzqnUIO1BvkZSR07DqrcCYvSfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

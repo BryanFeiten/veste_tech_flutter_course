@@ -1,0 +1,30 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "aula-firebase-veste",
+                    "appId": "1:840194764705:android:adfefc7b139d1c6b59e5e0",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "aula-firebase-veste",
+                    "appId": "1:840194764705:ios:9b85529bee7b401259e5e0",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "aula-firebase-veste",
+                    "configurations": {
+                        "android": "1:840194764705:android:adfefc7b139d1c6b59e5e0",
+                        "ios": "1:840194764705:ios:9b85529bee7b401259e5e0"
+                    }
+                }
+            }
+        }
+    }
+}

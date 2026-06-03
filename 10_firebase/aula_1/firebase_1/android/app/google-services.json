@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "840194764705",
+    "project_id": "aula-firebase-veste",
+    "storage_bucket": "aula-firebase-veste.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840194764705:android:adfefc7b139d1c6b59e5e0",
+        "android_client_info": {
+          "package_name": "com.growdev.firebase_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840194764705-20fi0q2jn71peuft8omq2o1dg2s2k9p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.growdev.firebase_1",
+            "certificate_hash": "0589e0d839373ea511d041e2764d137e60c45f33"
+          }
+        },
+        {
+          "client_id": "840194764705-bjag7mt5ksb4ktkhb9gd1s65t96l59ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3m02Mf6lZgHWkaBFI8z05lpeZfnlvPuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840194764705-bjag7mt5ksb4ktkhb9gd1s65t96l59ad.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "840194764705-r5l58bbt56vgoeigdrkpbo02eqet8aib.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.growdev.firebase1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
